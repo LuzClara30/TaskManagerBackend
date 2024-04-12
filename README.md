@@ -1,10 +1,11 @@
 # TaskManagerBackend
 # COLABORADORES.CONTROLLERS.JS
-* endpoint getUsers pertenece al controlador colaboradores
-Descripción: Obtener todos los colaboradores de la base de datos
-Método HTTP: GET
-Recibe: No recibe parametros
-Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):
+**endpoint getUsers** pertenece al controlador colaboradores
+**Descripción:** Obtener todos los colaboradores de la base de datos
+**Método HTTP:** GET
+**Recibe:** No recibe parametros
+**Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):**
+```json
 [
   {
     "id": 1,
@@ -15,16 +16,20 @@ Retorna una lista que contiene un JSON con el siguiente formato(código estado 2
     "nombre": "Alonso Montero Rojas"
   }
 ]
-Error del servidor (Código de estado 500):
-Error:  retorna un Json con la siguiente estructura
+```
+**Error del servidor (Código de estado 500):**
+**Error:**  retorna un Json con la siguiente estructura
+```json 
 {"error": "mensaje de error detectado"}
+ ```
 
 # TAREAS.CONTROLLERS.JS
-* endpoint getAllTask
-Descripción: Obtener todas las tareas de la base de datos
-Método HTTP: GET
-Recibe: No recibe parametros
-Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):
+**endpoint getAllTask**
+**Descripción:** Obtener todas las tareas de la base de datos
+**Método HTTP:** GET
+**Recibe:** No recibe parametros
+**Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):**
+```json 
 [
   {
     "id": 12,
@@ -47,17 +52,21 @@ Retorna una lista que contiene un JSON con el siguiente formato(código estado 2
     "notas": null
   },
   ]
-Error del servidor (Código de estado 500):
-Error:  retorna un Json con la siguiente estructura
+```
+***Error del servidor (Código de estado 500):**
+**Error:**  retorna un Json con la siguiente estructura
+```json 
 {"error": "mensaje de error detectado"}
+ ```
 
-* endpoint: createTask
-Descripción: Crear tareas en la base de datos
-Método HTTP: POST
-Recibe: Cuerpo de la solicitud formato(JSON):
-el colaborador puede ir "" en ese caso se le asignará null
-o puede llevar un int que coincida con el id de un colaborador
-en el caso de notas tambien puede ir "" y se le asignará null
+
+**endpoint: createTask**
+**Descripción:** Crear tareas en la base de datos
+**Método HTTP:** POST
+**Recibe:** Cuerpo de la solicitud formato(JSON):
+* el colaborador puede ir "" en ese caso se le asignará null o puede llevar un int que coincida con el id de un colaborador
+* en el caso de notas tambien puede ir "" y se le asignará null
+```json 
 {
     "descripcion": "tarea prueba",
     "colaborador_id": "",
@@ -67,7 +76,9 @@ en el caso de notas tambien puede ir "" y se le asignará null
     "fecha_fin": "2024-04-25T06:00:00.000Z",
     "notas": "realizar lo más pronto"
   }
-Retorna un JSON con el siguiente formato(Código de estado 200):
+   ```
+**Retorna un JSON con el siguiente formato(Código de estado 200):**
+```json 
 {
   "id": 16,
   "descripcion": "tarea prueba",
@@ -78,16 +89,19 @@ Retorna un JSON con el siguiente formato(Código de estado 200):
   "fecha_fin": "2024-04-25T06:00:00.000Z",
   "notas": "realizar lo más pronto"
 }
-Error del servidor (Código de estado 500):
-Error: retorna un JSON con la siguiente estructura
+```
+**Error del servidor (Código de estado 500):**
+**Error:** retorna un JSON con la siguiente estructura
+```json 
 {"error": "mensaje de error detectado"}
-
-* endpoint:updateTask
-Descripción: Editar tareas en la base de datos
-Método HTTP: PUT
-Parámetros de URL:
-'id' (obligatorio): ID de la tarea a actualizar
-Recibe: Cuerpo de la solicitud formato(JSON):
+```
+**endpoint:updateTask**
+**Descripción:** Editar tareas en la base de datos
+**Método HTTP:** PUT
+**Parámetros de URL:**
+* 'id' (obligatorio): ID de la tarea a actualizar
+**Recibe:** Cuerpo de la solicitud formato(JSON):
+```json 
 {
     "descripcion": "tarea prueba",
     "colaborador_id": "",
@@ -97,7 +111,9 @@ Recibe: Cuerpo de la solicitud formato(JSON):
     "fecha_fin": "2024-04-25T06:00:00.000Z",
     "notas": "realizar lo más pronto"
 }
-Retorna un JSON con el siguiente formato(Código de estado 200):
+```
+**Retorna un JSON con el siguiente formato(Código de estado 200):**
+```json 
 {
   "id": 16,
   "descripcion": "tarea prueba",
@@ -108,28 +124,36 @@ Retorna un JSON con el siguiente formato(Código de estado 200):
   "fecha_fin": "2024-04-25T06:00:00.000Z",
   "notas": "realizar lo más pronto"
 }
-Error del servidor (Código de estado 500):
+``` 
+**Error del servidor (Código de estado 500):**
+```json 
 {
   "error": "string"
 }
-
-* endpoint:deleteTask
-Descripción: Eliminar tareas en la base de datos
-Método HTTP: DELETE
-Parámetros de URL:
-'id' (obligatorio): ID de la tarea a eliminar
-No Recibe: Cuerpo de la solicitud en formato(JSON)
-Éxito (Código de estado 200):
+``` 
+**endpoint:deleteTask**
+**Descripción:** Eliminar tareas en la base de datos
+**Método HTTP:** DELETE
+**Parámetros de URL:**
+* 'id' (obligatorio): ID de la tarea a eliminar
+**No Recibe:** Cuerpo de la solicitud en formato(JSON)
+**Éxito (Código de estado 200):**
+```json 
 {
   "message": "Task deleted successfully"
 }
-No encontrado (Código de estado 404):
+``` 
+**No encontrado (Código de estado 404):**
+```json 
 {
   "message": "Task not found"
 }
-Error del servidor (Código de estado 500):
+```
+**Error del servidor (Código de estado 500):**
+```json 
 {
   "error": "string"
 }
+```
 
 
