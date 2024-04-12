@@ -1,10 +1,10 @@
 # TaskManagerBackend
 # COLABORADORES.CONTROLLERS.JS
-**endpoint getUsers** pertenece al controlador colaboradores
-**Descripción:** Obtener todos los colaboradores de la base de datos
-**Método HTTP:** GET
-**Recibe:** No recibe parametros
-**Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):**
+* **endpoint getUsers** pertenece al controlador colaboradores
+* **Descripción:** Obtener todos los colaboradores de la base de datos
+* **Método HTTP:** GET
+* **Recibe:** No recibe parametros
+* **Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):**
 ```json
 [
   {
@@ -24,11 +24,11 @@
  ```
 
 # TAREAS.CONTROLLERS.JS
-**endpoint getAllTask**
-**Descripción:** Obtener todas las tareas de la base de datos
-**Método HTTP:** GET
-**Recibe:** No recibe parametros
-**Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):**
+* **endpoint getAllTask**
+* **Descripción:** Obtener todas las tareas de la base de datos
+* **Método HTTP:** GET
+* **Recibe:** No recibe parametros
+* **Retorna una lista que contiene un JSON con el siguiente formato(código estado 200):**
 ```json 
 [
   {
@@ -60,10 +60,10 @@
  ```
 
 
-**endpoint: createTask**
-**Descripción:** Crear tareas en la base de datos
-**Método HTTP:** POST
-**Recibe:** Cuerpo de la solicitud formato(JSON):
+* **endpoint: createTask**
+* **Descripción:** Crear tareas en la base de datos
+* **Método HTTP:** POST
+* **Recibe:** Cuerpo de la solicitud formato(JSON):
 * el colaborador puede ir "" en ese caso se le asignará null o puede llevar un int que coincida con el id de un colaborador
 * en el caso de notas tambien puede ir "" y se le asignará null
 ```json 
@@ -95,12 +95,12 @@
 ```json 
 {"error": "mensaje de error detectado"}
 ```
-**endpoint:updateTask**
-**Descripción:** Editar tareas en la base de datos
-**Método HTTP:** PUT
-**Parámetros de URL:**
+* **endpoint:updateTask**
+* **Descripción:** Editar tareas en la base de datos
+* **Método HTTP:** PUT
+* **Parámetros de URL:**
 * 'id' (obligatorio): ID de la tarea a actualizar
-**Recibe:** Cuerpo de la solicitud formato(JSON):
+* **Recibe:** Cuerpo de la solicitud formato(JSON):
 ```json 
 {
     "descripcion": "tarea prueba",
@@ -131,13 +131,13 @@
   "error": "string"
 }
 ``` 
-**endpoint:deleteTask**
-**Descripción:** Eliminar tareas en la base de datos
-**Método HTTP:** DELETE
-**Parámetros de URL:**
+* **endpoint:deleteTask**
+* **Descripción:** Eliminar tareas en la base de datos
+* **Método HTTP:** DELETE
+* **Parámetros de URL:**
 * 'id' (obligatorio): ID de la tarea a eliminar
-**No Recibe:** Cuerpo de la solicitud en formato(JSON)
-**Éxito (Código de estado 200):**
+* **No Recibe:** Cuerpo de la solicitud en formato(JSON)
+* **Éxito (Código de estado 200):**
 ```json 
 {
   "message": "Task deleted successfully"
